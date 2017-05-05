@@ -1,0 +1,14 @@
+<h1>Show</h1>
+
+<% @myBoard.each do |q| %>
+    질문번호 : <%= q.id %><br>
+    제목 : <%= q.title %><br>
+    작성자 : <%= q.editor %><br>
+    내용 : <%= q.content %><br>
+    
+    <a href="/edit/<%= q.id %>">[수정]</a>
+    <a href="/destroy/<%= q.id %>">[삭제]</a>
+    <br><br>
+<% end %>
+
+<a href ="/">홈으로</a>
